@@ -1,0 +1,30 @@
+/*This program will calculate a salary of a penny doubled every incremental day.
+*/
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+//variables
+double total;
+int  day;
+double penny =.01;
+
+int main()
+{
+    std::cout <<"You are given a choice of 1 Million Dollars, or a salary of\n";
+    std::cout <<"1 penny a day, doubled, for 130 days. If you don't choose\n";
+    std::cout <<" the quick choice, this program will show you your salary\n";
+
+    std::cout <<"Day:\t\tSalary:\n";
+    //primer
+    day =1 ;
+
+     while(day <= 130)
+    {
+        penny = penny * 2;
+        std::cout <<"Day "<<std::noshowpoint<<day;
+        std::cout <<"\t\tPaid:"<<std::showpoint<<std::setprecision(2)<<std::fixed<<penny<<"\n";
+        total = total + penny;
+        day = day+1;
+    }
+    std::cout <<"\nTotal Days: "<<day-1<<"\tTotal Paid: $"<<total*100<<"\n\n\n";
+    return 0;
